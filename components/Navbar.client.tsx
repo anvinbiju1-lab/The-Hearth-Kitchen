@@ -133,31 +133,46 @@ export default function Navbar() {
                             )}
 
                             <button
-                                onClick={() => scrollToSection('hearth')}
+                                onClick={() => {
+                                    scrollToSection('hearth');
+                                    setIsMobileMenuOpen(false);
+                                }}
                                 className="block w-full text-left px-4 py-3 text-white hover:bg-charcoal-800 rounded-lg transition-colors"
                             >
                                 Story
                             </button>
                             <button
-                                onClick={() => scrollToSection('menu')}
+                                onClick={() => {
+                                    scrollToSection('menu');
+                                    setIsMobileMenuOpen(false);
+                                }}
                                 className="block w-full text-left px-4 py-3 text-white hover:bg-charcoal-800 rounded-lg transition-colors"
                             >
                                 Menu
                             </button>
                             <button
-                                onClick={() => scrollToSection('chef')}
+                                onClick={() => {
+                                    scrollToSection('chef');
+                                    setIsMobileMenuOpen(false);
+                                }}
                                 className="block w-full text-left px-4 py-3 text-white hover:bg-charcoal-800 rounded-lg transition-colors"
                             >
                                 Chef
                             </button>
                             <button
-                                onClick={() => scrollToSection('reviews')}
+                                onClick={() => {
+                                    scrollToSection('reviews');
+                                    setIsMobileMenuOpen(false);
+                                }}
                                 className="block w-full text-left px-4 py-3 text-white hover:bg-charcoal-800 rounded-lg transition-colors"
                             >
                                 Reviews
                             </button>
                             <button
-                                onClick={() => scrollToSection('contact')}
+                                onClick={() => {
+                                    scrollToSection('contact');
+                                    setIsMobileMenuOpen(false);
+                                }}
                                 className="block w-full text-left px-4 py-3 text-white hover:bg-charcoal-800 rounded-lg transition-colors"
                             >
                                 Contact
