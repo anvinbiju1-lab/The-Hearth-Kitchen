@@ -1,0 +1,65 @@
+{
+    "sourceLabel": "Guest reviews",
+    "items": [
+        {
+            "id": "arjun-nair",
+            "name": "Arjun Nair",
+            "text": "The best wood-fired pizza in Kochi, hands down. The crust is perfectly thin and smoky. The Don Pollo is a must-try!",
+            "rating": 5
+        },
+        {
+            "id": "sarah-thomas",
+            "name": "Sarah Thomas",
+            "text": "A total hidden gem in Panampilly Nagar. The place is small but the vibes are so cozy. Feels like a little European cafe.",
+            "rating": 5
+        },
+        {
+            "id": "rahul-krishna",
+            "name": "Rahul Krishna",
+            "text": "I didn't think Kerala Beef Fry would work on a pizza, but it is absolute magic. Spicy, flavorful, and unique. Highly recommended.",
+            "rating": 5
+        },
+        {
+            "id": "sneha-p",
+            "name": "Sneha P.",
+            "text": "Finally, authentic sourdough pizza! You can taste the quality of the dough. It's light, airy, and doesn't leave you feeling heavy.",
+            "rating": 5
+        },
+        {
+            "id": "mohammed-fayas",
+            "name": "Mohammed Fayas",
+            "text": "The Basque Cheesecake is to die for. I come here just for dessert sometimes. Great service and lovely interiors.",
+            "rating": 5
+        },
+        {
+            "id": "anjali-menon",
+            "name": "Anjali Menon",
+            "text": "Love the open kitchen concept! Watching the pizzas go into the wood-fired oven adds to the whole experience. 5/5 stars.",
+            "rating": 5
+        },
+        {
+            "id": "david-george",
+            "name": "David George",
+            "text": "The Peach Lavender Mojito is so refreshing. It pairs perfectly with their spicy meat pizzas. My go-to spot for dinner.",
+            "rating": 5
+        },
+        {
+            "id": "lakshmi-r",
+            "name": "Lakshmi R.",
+            "text": "Premium quality ingredients. You can tell they don't cut corners. It's a bit pricey but totally worth it for the taste.",
+            "rating": 5
+        },
+        {
+            "id": "vivek-s",
+            "name": "Vivek S.",
+            "text": "Great spot for a date night. The lighting is warm and the music is just right. Not too loud, just good vibes and great food.",
+            "rating": 5
+        },
+        {
+            "id": "meera-john",
+            "name": "Meera John",
+            "text": "The Wild Mushroom pizza was incredible. Even as a vegetarian, I was blown away by the flavors. Definitely coming back.",
+            "rating": 5
+        }
+    ]
+}
