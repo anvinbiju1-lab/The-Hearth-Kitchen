@@ -15,11 +15,11 @@ export default function Story() {
                         </div>
 
                         <p className="text-lg text-charcoal-200 mb-6 leading-relaxed">
-                            At The Hearth Kitchen, we believe in the magic of fire. Our wood-fired oven isn't just a cooking tool—it's the heart of our restaurant, infusing every pizza with smoky warmth and authentic Italian flavor.
+                            At The Hearth Kitchen, we believe in the magic of fire. Our wood-fired oven isn&apos;t just a cooking tool—it&apos;s the heart of our restaurant, infusing every pizza with smoky warmth and authentic Italian flavor.
                         </p>
 
                         <p className="text-lg text-charcoal-200 mb-6 leading-relaxed">
-                            Nestled in Panampilly Nagar, we're a hidden gem where rustic charm meets modern sophistication. Dark wood textures, warm lighting, and the mesmerizing glow of our open kitchen create an atmosphere that's both cozy and premium.
+                            Nestled in Panampilly Nagar, we&apos;re a hidden gem where rustic charm meets modern sophistication. Dark wood textures, warm lighting, and the mesmerizing glow of our open kitchen create an atmosphere that&apos;s both cozy and premium.
                         </p>
 
                         <p className="text-lg text-charcoal-200 leading-relaxed">

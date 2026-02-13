@@ -39,7 +39,7 @@ export default function Testimonials() {
                         >
                             <Quote className="w-10 h-10 text-ember-500 mb-4" />
                             <p className="text-white text-lg mb-6 leading-relaxed">
-                                "{testimonial.text}"
+                                &quot;{testimonial.text}&quot;
                             </p>
                             <p className="text-charcoal-400 font-medium">
                                 — {testimonial.author}
