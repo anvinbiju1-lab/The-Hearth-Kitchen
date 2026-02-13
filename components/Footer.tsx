@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { getOpenStatus, getFormattedHours } from '@/lib/businessHours';
 
@@ -28,10 +29,12 @@ export default function Footer() {
                     {/* Brand */}
                     <div>
                         <div className="flex items-center gap-3 mb-4">
-                            <img
+                            <Image
                                 src="/logo.png"
                                 alt="The Hearth Kitchen Logo"
-                                className="w-12 h-12 object-contain"
+                                width={48}
+                                height={48}
+                                className="object-contain"
                             />
                             <h3 className="text-white font-serif text-xl font-bold">
                                 The Hearth Kitchen

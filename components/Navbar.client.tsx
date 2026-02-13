@@ -1,8 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone, MapPin, Clock } from 'lucide-react';
+import { Menu, X, Phone, Clock } from 'lucide-react';
 import { getOpenStatus } from '@/lib/businessHours';
 
 export default function Navbar() {
@@ -52,10 +53,12 @@ export default function Navbar() {
                 <div className="flex items-center justify-between h-20">
                     {/* Logo */}
                     <div className="flex items-center gap-3">
-                        <img
+                        <Image
                             src="/logo.png"
                             alt="The Hearth Kitchen Logo"
-                            className="w-12 h-12 object-contain"
+                            width={48}
+                            height={48}
+                            className="object-contain"
                         />
                         <div>
                             <h1 className="text-white font-serif text-xl font-bold">The Hearth Kitchen</h1>

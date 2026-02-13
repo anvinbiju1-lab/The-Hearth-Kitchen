@@ -26,7 +26,7 @@ export default function Contact() {
                         Visit Us
                     </h2>
                     <p className="text-charcoal-300 text-lg">
-                        We'd love to serve you
+                        We&apos;d love to serve you
                     </p>
                 </div>
 
