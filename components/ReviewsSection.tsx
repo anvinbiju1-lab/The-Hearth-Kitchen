@@ -27,7 +27,7 @@ export default function ReviewsSection() {
                                 className="bg-gradient-to-br from-charcoal-800 to-charcoal-900 rounded-xl p-8 border border-charcoal-700"
                             >
                                 <p className="text-white text-lg mb-4 leading-relaxed">
-                                    "{review.text}"
+                                    &quot;{review.text}&quot;
                                 </p>
                                 <p className="text-charcoal-400 font-medium">
                                     — {review.name}

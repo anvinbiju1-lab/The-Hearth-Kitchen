@@ -128,7 +128,7 @@ export default function ReviewsCarousel({ reviews }: ReviewsCarouselProps) {
 
                             {/* Review text */}
                             <p className="text-white text-xl md:text-2xl mb-8 leading-relaxed font-light">
-                                "{reviews[currentIndex].text}"
+                                &quot;{reviews[currentIndex].text}&quot;
                             </p>
 
                             {/* Rating stars */}
@@ -175,8 +175,8 @@ export default function ReviewsCarousel({ reviews }: ReviewsCarouselProps) {
                             role="tab"
                             aria-selected={index === currentIndex}
                             className={`w-3 h-3 rounded-full transition-all ${index === currentIndex
-                                    ? 'bg-ember-600 w-8 shadow-lg shadow-ember-600/50'
-                                    : 'bg-charcoal-700 hover:bg-charcoal-600'
+                                ? 'bg-ember-600 w-8 shadow-lg shadow-ember-600/50'
+                                : 'bg-charcoal-700 hover:bg-charcoal-600'
                                 }`}
                             style={{ touchAction: 'manipulation' }}
                         />
