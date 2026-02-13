@@ -2,7 +2,7 @@ import { Award, ChefHat } from 'lucide-react';
 
 export default function Chef() {
     return (
-        <section id="chef" className="relative py-24 bg-gradient-to-b from-charcoal-950 to-charcoal-900" data-scroll="fade-in">
+        <section id="chef" className="relative py-24 bg-gradient-to-b from-charcoal-950 to-charcoal-900 scroll-mt-24" data-scroll="fade-in">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">

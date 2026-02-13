@@ -10,7 +10,11 @@ export default function ScrollEffects() {
     useEffect(() => {
         // Check for reduced motion preference
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (prefersReducedMotion || effectsInitialized.current) return;
+
+        // Check if mobile device (disable GSAP on mobile to prevent scroll interference)
+        const isMobile = window.innerWidth < 768;
+
+        if (prefersReducedMotion || effectsInitialized.current || isMobile) return;
 
         // Register GSAP plugin
         gsap.registerPlugin(ScrollTrigger);

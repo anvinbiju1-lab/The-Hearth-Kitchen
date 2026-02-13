@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone, Clock } from 'lucide-react';
 import { getOpenStatus } from '@/lib/businessHours';
+import SectionLink from './SectionLink.client';
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -34,13 +35,7 @@ export default function Navbar() {
         return () => clearInterval(interval);
     }, []);
 
-    const scrollToSection = (id: string) => {
-        const element = document.getElementById(id);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            setIsMobileMenuOpen(false);
-        }
-    };
+
 
     return (
         <nav
@@ -75,21 +70,21 @@ export default function Navbar() {
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-8">
-                        <button onClick={() => scrollToSection('hearth')} className="text-charcoal-300 hover:text-white transition-colors">
+                        <SectionLink href="#hearth" className="text-charcoal-300 hover:text-white transition-colors">
                             Story
-                        </button>
-                        <button onClick={() => scrollToSection('menu')} className="text-charcoal-300 hover:text-white transition-colors">
+                        </SectionLink>
+                        <SectionLink href="#menu" className="text-charcoal-300 hover:text-white transition-colors">
                             Menu
-                        </button>
-                        <button onClick={() => scrollToSection('chef')} className="text-charcoal-300 hover:text-white transition-colors">
+                        </SectionLink>
+                        <SectionLink href="#chef" className="text-charcoal-300 hover:text-white transition-colors">
                             Chef
-                        </button>
-                        <button onClick={() => scrollToSection('reviews')} className="text-charcoal-300 hover:text-white transition-colors">
+                        </SectionLink>
+                        <SectionLink href="#reviews" className="text-charcoal-300 hover:text-white transition-colors">
                             Reviews
-                        </button>
-                        <button onClick={() => scrollToSection('contact')} className="text-charcoal-300 hover:text-white transition-colors">
+                        </SectionLink>
+                        <SectionLink href="#contact" className="text-charcoal-300 hover:text-white transition-colors">
                             Contact
-                        </button>
+                        </SectionLink>
                         <a
                             href="tel:+918075620640"
                             className="flex items-center gap-2 px-6 py-2 bg-ember-600 hover:bg-ember-700 text-white rounded-full transition-colors"
@@ -132,51 +127,41 @@ export default function Navbar() {
                                 </div>
                             )}
 
-                            <button
-                                onClick={() => {
-                                    scrollToSection('hearth');
-                                    setIsMobileMenuOpen(false);
-                                }}
+                            <SectionLink
+                                href="#hearth"
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className="block w-full text-left px-4 py-3 text-white hover:bg-charcoal-800 rounded-lg transition-colors"
                             >
                                 Story
-                            </button>
-                            <button
-                                onClick={() => {
-                                    scrollToSection('menu');
-                                    setIsMobileMenuOpen(false);
-                                }}
+                            </SectionLink>
+                            <SectionLink
+                                href="#menu"
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className="block w-full text-left px-4 py-3 text-white hover:bg-charcoal-800 rounded-lg transition-colors"
                             >
                                 Menu
-                            </button>
-                            <button
-                                onClick={() => {
-                                    scrollToSection('chef');
-                                    setIsMobileMenuOpen(false);
-                                }}
+                            </SectionLink>
+                            <SectionLink
+                                href="#chef"
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className="block w-full text-left px-4 py-3 text-white hover:bg-charcoal-800 rounded-lg transition-colors"
                             >
                                 Chef
-                            </button>
-                            <button
-                                onClick={() => {
-                                    scrollToSection('reviews');
-                                    setIsMobileMenuOpen(false);
-                                }}
+                            </SectionLink>
+                            <SectionLink
+                                href="#reviews"
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className="block w-full text-left px-4 py-3 text-white hover:bg-charcoal-800 rounded-lg transition-colors"
                             >
                                 Reviews
-                            </button>
-                            <button
-                                onClick={() => {
-                                    scrollToSection('contact');
-                                    setIsMobileMenuOpen(false);
-                                }}
+                            </SectionLink>
+                            <SectionLink
+                                href="#contact"
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className="block w-full text-left px-4 py-3 text-white hover:bg-charcoal-800 rounded-lg transition-colors"
                             >
                                 Contact
-                            </button>
+                            </SectionLink>
                             <a
                                 href="tel:+918075620640"
                                 className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-ember-600 hover:bg-ember-700 text-white rounded-lg transition-colors"
