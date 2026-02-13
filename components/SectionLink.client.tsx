@@ -1,7 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
 interface SectionLinkProps {
     href: string;
     children: React.ReactNode;
@@ -10,45 +8,49 @@ interface SectionLinkProps {
 }
 
 export default function SectionLink({ href, children, className, onClick }: SectionLinkProps) {
-    const [navbarHeight, setNavbarHeight] = useState(80);
-
-    useEffect(() => {
-        // Dynamically get navbar height
-        const navbar = document.querySelector('nav');
-        if (navbar) {
-            setNavbarHeight(navbar.offsetHeight);
-        }
-    }, []);
-
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
+        e.stopPropagation();
 
-        // Close mobile menu if callback provided
+        // Close mobile menu FIRST if callback provided
         if (onClick) {
             onClick();
         }
 
-        // Get target section
-        const targetId = href.replace('#', '');
-        const targetElement = document.getElementById(targetId);
+        // Small delay to let menu close animation start
+        setTimeout(() => {
+            // Get target section ID
+            const targetId = href.replace('#', '');
+            const targetElement = document.getElementById(targetId);
 
-        if (targetElement) {
-            // Calculate position with offset for navbar
-            const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+            if (targetElement) {
+                // Get navbar height dynamically
+                const navbar = document.querySelector('nav');
+                const navbarHeight = navbar ? navbar.offsetHeight : 80;
 
-            // Smooth scroll to position
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
+                // Calculate position with offset for sticky navbar
+                const rect = targetElement.getBoundingClientRect();
+                const offset = 96; // Extra offset for safety
+                const y = window.scrollY + rect.top - offset;
+
+                // Smooth scroll to position
+                window.scrollTo({
+                    top: y,
+                    behavior: 'smooth'
+                });
+            }
+        }, 100);
     };
 
     return (
         <button
+            type="button"
             onClick={handleClick}
             className={className}
+            style={{
+                WebkitTapHighlightColor: 'transparent',
+                touchAction: 'manipulation'
+            }}
         >
             {children}
         </button>

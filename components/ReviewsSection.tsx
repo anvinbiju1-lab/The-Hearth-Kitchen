@@ -5,7 +5,7 @@ export default function ReviewsSection() {
     return (
         <section
             id="reviews"
-            className="relative py-24 bg-charcoal-900 scroll-mt-24"
+            className="relative py-24 bg-charcoal-900 scroll-mt-28"
             data-scroll="fade-in"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

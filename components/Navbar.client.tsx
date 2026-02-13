@@ -70,7 +70,7 @@ export default function Navbar() {
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-8">
-                        <SectionLink href="#hearth" className="text-charcoal-300 hover:text-white transition-colors">
+                        <SectionLink href="#story" className="text-charcoal-300 hover:text-white transition-colors">
                             Story
                         </SectionLink>
                         <SectionLink href="#menu" className="text-charcoal-300 hover:text-white transition-colors">
@@ -128,7 +128,7 @@ export default function Navbar() {
                             )}
 
                             <SectionLink
-                                href="#hearth"
+                                href="#story"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="block w-full text-left px-4 py-3 text-white hover:bg-charcoal-800 rounded-lg transition-colors"
                             >

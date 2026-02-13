@@ -67,7 +67,7 @@ export default function Home() {
                 <Story />
 
                 {/* Menu Section */}
-                <section id="menu" className="relative py-24 bg-charcoal-900 scroll-mt-24" data-scroll="fade-in">
+                <section id="menu" className="relative py-24 bg-charcoal-900 scroll-mt-28" data-scroll="fade-in">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-12">
                             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">

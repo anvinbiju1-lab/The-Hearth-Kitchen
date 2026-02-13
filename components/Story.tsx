@@ -2,7 +2,8 @@ import { Flame } from 'lucide-react';
 
 export default function Story() {
     return (
-        <section id="hearth" className="relative py-24 bg-charcoal-950 scroll-mt-24" data-scroll="fade-in">
+        <section id="hearth" className="relative py-24 bg-charcoal-950 scroll-mt-28" data-scroll="fade-in">
+            <div id="story" className="absolute -top-28"></div>
             <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
                     {/* Text Content */}
