@@ -4,6 +4,8 @@ import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Leaf, Drumstick } from 'lucide-react';
 import { menuData, MenuItem } from '@/lib/menu';
+import OrderPlatformChooser from './OrderPlatformChooser.client';
+import { ORDER_LINKS } from '@/lib/orderLinks';
 
 type CategoryTab = 'pizzas' | 'pasta' | 'starters' | 'drinks' | 'coffee' | 'toppings';
 type PizzaSubTab = 'veg' | 'non-veg';
@@ -14,6 +16,7 @@ export default function MenuTabs() {
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
     const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null);
+    const [orderChooserOpen, setOrderChooserOpen] = useState(false);
 
     // Get all items for current category
     const categoryItems = useMemo(() => {
@@ -227,7 +230,7 @@ export default function MenuTabs() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         onClick={() => setSelectedItem(null)}
-                        className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+                        className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[40] flex items-center justify-center p-4"
                     >
                         <motion.div
                             layoutId={selectedItem.id}
@@ -284,6 +287,7 @@ export default function MenuTabs() {
                             </div>
 
                             <button
+                                onClick={() => setOrderChooserOpen(true)}
                                 className="w-full py-4 min-h-[44px] bg-ember-600 hover:bg-ember-700 active:bg-ember-800 text-white font-bold rounded-lg transition-colors"
                                 style={{ touchAction: 'manipulation' }}
                             >
@@ -293,6 +297,16 @@ export default function MenuTabs() {
                     </motion.div>
                 )}
             </AnimatePresence>
+            <OrderPlatformChooser
+                open={orderChooserOpen}
+                onClose={() => setOrderChooserOpen(false)}
+                onSelect={(platform) => {
+                    const url = ORDER_LINKS[platform];
+                    window.open(url, '_blank', 'noopener,noreferrer');
+                    setOrderChooserOpen(false);
+                    setSelectedItem(null);
+                }}
+            />
         </div>
     );
 }
