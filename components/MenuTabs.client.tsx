@@ -300,9 +300,7 @@ export default function MenuTabs() {
             <OrderPlatformChooser
                 open={orderChooserOpen}
                 onClose={() => setOrderChooserOpen(false)}
-                onSelect={(platform) => {
-                    const url = ORDER_LINKS[platform];
-                    window.open(url, '_blank', 'noopener,noreferrer');
+                onSelect={() => {
                     setOrderChooserOpen(false);
                     setSelectedItem(null);
                 }}
