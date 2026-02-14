@@ -13,9 +13,9 @@ export default function Hero() {
                         <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                         <span className="text-white font-medium">4.5/5</span>
                     </div>
-                    <div className="flex items-center gap-2 px-4 py-2 bg-charcoal-900/80 backdrop-blur-sm rounded-full border border-charcoal-700">
+                    <div className="flex items-center gap-2 px-4 py-2 bg-charcoal-900/80 backdrop-blur-sm rounded-full border border-charcoal-700 whitespace-nowrap">
                         <IndianRupee className="w-4 h-4 text-ember-400" />
-                        <span className="text-white font-medium">₹400-600</span>
+                        <span className="text-white font-medium max-w-[160px] truncate">₹400–600 / person</span>
                     </div>
                     <div className="flex items-center gap-2 px-4 py-2 bg-green-900/30 backdrop-blur-sm rounded-full border border-green-700">
                         <Clock className="w-4 h-4 text-green-400" />
