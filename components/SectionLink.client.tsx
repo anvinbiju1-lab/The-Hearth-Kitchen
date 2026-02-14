@@ -24,9 +24,6 @@ export default function SectionLink({ href, children, className, onClick }: Sect
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                // Get navbar height dynamically
-                const navbar = document.querySelector('nav');
-                const navbarHeight = navbar ? navbar.offsetHeight : 80;
 
                 // Calculate position with offset for sticky navbar
                 const rect = targetElement.getBoundingClientRect();

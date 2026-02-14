@@ -99,7 +99,7 @@ export default function OrderPlatformChooser({
                         </div>
 
                         <p className="text-center text-charcoal-400 text-sm mt-6">
-                            You'll be redirected to the selected platform
+                            You&apos;ll be redirected to the selected platform
                         </p>
                     </motion.div>
                 </>
